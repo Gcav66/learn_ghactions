@@ -16,8 +16,8 @@ jobs:
       - name: Run Python
         id: step_v1
         run: |
-          echo "my_food=`python app.py`" >> $GITHUB_ENV
+          python app.py
       - name: Check env value
         id: step_v2
         run: |
-          echo "${{ env.my_food }}
+          echo "${{ steps.id.my_food }}
