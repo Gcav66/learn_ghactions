@@ -13,5 +13,5 @@ value = 'my_value'
 
 
 if __name__ == "__main__":
-    with open(os.environ['GITHUB_OUTPUT'], 'a') as fh:
-        print(f'{name}={value}', file=fh)
+    result = food()
+    print(f'::set-output name=FOOD::{result}')
