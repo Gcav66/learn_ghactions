@@ -13,3 +13,11 @@ jobs:
         id: step_two
         run: |
           echo "${{ env.action_state }}" # This will output 'yellow'
+      - name: Run Python
+        id: step_v1
+        run: |
+          python app.py
+      - name: Check env value
+        id: step_v2
+        run: |
+          echo $FOOD
