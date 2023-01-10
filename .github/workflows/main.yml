@@ -31,4 +31,4 @@ jobs:
       - name: Check env value
         id: step_v2
         run: |
-          echo "${{ steps.step_v1.my_food }}
+          echo "${{ steps.step_v1.my_food }}"
