@@ -16,7 +16,6 @@ jobs:
       - name: Run Python
         id: step_v1
         run: |
-          export FOOD=`python app.py`
           echo "my_food=`python app.py`" >> $GITHUB_ENV
       - name: Check env value
         id: step_v2
