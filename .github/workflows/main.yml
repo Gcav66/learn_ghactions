@@ -13,20 +13,12 @@ jobs:
         id: step_two
         run: |
           echo "${{ env.action_state }}" # This will output 'yellow'
-      
-      # Checks-out your repository under $GITHUB_WORKSPACE
-      - uses: actions/checkout@v3
-
-      # Setup Python 3.9
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.9"
       - name: Run Python
         id: step_v1
         run: |
-          python app.py
+          export FOOD=`python app.py`
+          echo "my_food=`python app.py`" >> $GITHUB_ENV
       - name: Check env value
         id: step_v2
         run: |
-          echo $FOOD
+          echo "${{ env.my_food }}
