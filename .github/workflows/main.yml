@@ -27,7 +27,8 @@ jobs:
         id: step_v1
         run: |
           python app.py
+          
       - name: Check env value
         id: step_v2
         run: |
-          echo "${{ steps.id.my_food }}
+          echo "${{ steps.step_v1.my_food }}
