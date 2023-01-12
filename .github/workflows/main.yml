@@ -32,3 +32,4 @@ jobs:
         id: step_v2
         run: |
           echo "${{ steps.step_v1.FOOD }}"
+          echo "${{ env.action_state }}" # This will output 'yellow'

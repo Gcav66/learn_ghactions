@@ -15,3 +15,4 @@ value = 'my_value'
 if __name__ == "__main__":
     result = food()
     print(f'::set-output name=FOOD::{result}')
+    print(f'"foo_bar=yellow" >> $GITHUB_ENV')
