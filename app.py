@@ -15,4 +15,4 @@ value = 'my_value'
 if __name__ == "__main__":
     result = food()
     #print(f'::set-output name=FOOD::{result}')
-    print("foo_bar=yellow")
+    print(f"foo_bar={result}")
