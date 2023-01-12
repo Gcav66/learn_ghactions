@@ -26,10 +26,11 @@ jobs:
       - name: Run Python
         id: step_v1
         run: |
-          python app.py
+          python app.py >> $GITHUB_ENV
           
       - name: Check env value
         id: step_v2
         run: |
           echo "${{ steps.step_v1.FOOD }}"
           echo "${{ env.action_state }}" # This will output 'yellow'
+          echo "${{ env.foo_bar }}" # This should output 'yellow'
